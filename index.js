@@ -48,7 +48,7 @@ function longestWord(str) {
 console.log(longestWord('I m the boss'));
 */
 /******************* Longest words***********/
-
+/*
 function longestWords(str) {
   const words = str.split(' ');
   let size = 0;
@@ -70,3 +70,23 @@ function longestWords(str) {
   return [...max];
 }
 console.log(longestWords('I am the your boss yes no'));
+
+*/
+/************************Capitaliza first letter *******************************/
+/*
+function capitalize(str) {
+  let words = str.split(' ');
+
+  console.log('Words: ', words);
+  let output = words.map((word) => {
+    // let first = word.slice(0, 1).toUpperCase();
+    // console.log(' First: ', first);
+    // let rest = word.slice(1);
+    // console.log('rest: ', rest);
+    // return `${first}${rest}`;
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  return output.join(' ');
+}
+console.log(capitalize('i am the your boss'));
+*/
