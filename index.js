@@ -47,4 +47,26 @@ function longestWord(str) {
 
 console.log(longestWord('I m the boss'));
 */
-/******************* ***********/
+/******************* Longest words***********/
+
+function longestWords(str) {
+  const words = str.split(' ');
+  let size = 0;
+  let max = [''];
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length >= size) {
+      size = words[i].length;
+      // console.log('size:  ', size);
+      if (max[max.length - 1].length < words[i].length) {
+        console.log('max-1:  ', max[max.length - 1]);
+        max = [];
+        max.push(words[i]);
+      } else {
+        max = [...max, words[i]];
+      }
+    }
+  }
+  // console.log('Words:', words);
+  return [...max];
+}
+console.log(longestWords('I am the your boss yes no'));
